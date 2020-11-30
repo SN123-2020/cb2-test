@@ -5,7 +5,12 @@ const Body = Matter.Body;
 const Render = Matter.Render;
 var dustbinObj, paperObject,groundObject;
 var world;
+var bgImg;
 
+function preload(){
+bgImg = loadImage("park.jpg")
+
+}
 function setup() {
 	createCanvas(1600, 700);
 	rectMode(CENTER);
@@ -22,6 +27,7 @@ function setup() {
 
 
 function draw() {
+  background(bgImg)
   rectMode(CENTER);
 
   groundObject.display();
